@@ -1,4 +1,5 @@
-from pydantic import BaseModel, Enum
+from pydantic import BaseModel
+from enum import Enum
 from dataclasses import dataclass
 from pydantic_ai import Agent, RunContext
 
@@ -15,6 +16,3 @@ class Strategy(BaseModel):
     frequency: Frequency
     lookback: int
 
-@dataclass
-class TickerFetcherDeps:
-    universe: str
